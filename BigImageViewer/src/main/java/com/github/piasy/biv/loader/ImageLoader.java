@@ -25,7 +25,7 @@
 package com.github.piasy.biv.loader;
 
 import android.net.Uri;
-import android.support.annotation.UiThread;
+import androidx.annotation.UiThread;
 import android.view.View;
 import com.github.piasy.biv.view.BigImageView;
 import java.io.File;

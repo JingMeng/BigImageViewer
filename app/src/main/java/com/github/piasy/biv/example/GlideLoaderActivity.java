@@ -1,4 +1,4 @@
-/*
+﻿/*
  * The MIT License (MIT)
  *
  * Copyright (c) 2016 Piasy
@@ -26,7 +26,7 @@ package com.github.piasy.biv.example;
 
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import com.github.piasy.biv.BigImageViewer;
@@ -67,3 +67,4 @@ public class GlideLoaderActivity extends AppCompatActivity {
         Log.w(App.TAG, "fixLeakCanary696: " + (end - start));
     }
 }
+

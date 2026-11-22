@@ -1,4 +1,4 @@
-/*
+﻿/*
  * The MIT License (MIT)
  *
  * Copyright (c) 2017 Piasy
@@ -25,7 +25,7 @@
 package com.github.piasy.biv.example;
 
 import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import com.github.piasy.biv.BigImageViewer;
@@ -56,3 +56,4 @@ public class CustomSSIVActivity extends AppCompatActivity {
         });
     }
 }
+

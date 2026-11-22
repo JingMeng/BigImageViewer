@@ -23,8 +23,6 @@
  */
 
 apply plugin: 'com.android.library'
-apply plugin: 'com.github.ben-manes.versions'
-apply from: "https://raw.githubusercontent.com/Piasy/GradleScripts/master/PRJ_NAME/gradle/bintray.gradle"
 
 android {
     compileSdkVersion rootProject.ext.androidCompileSdkVersion

@@ -1,4 +1,4 @@
-/*
+﻿/*
  * The MIT License (MIT)
  *
  * Copyright (c) 2016 Piasy
@@ -26,7 +26,7 @@ package com.github.piasy.biv.example;
 
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Spinner;
@@ -92,3 +92,4 @@ public class ScaleTypeActivity extends AppCompatActivity {
         }
     }
 }
+

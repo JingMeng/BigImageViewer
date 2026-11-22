@@ -1,4 +1,4 @@
-/*
+﻿/*
  * The MIT License (MIT)
  *
  * Copyright (c) 2016 Piasy
@@ -26,7 +26,7 @@ package com.github.piasy.biv.example;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
@@ -74,3 +74,4 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 }
+

@@ -24,7 +24,6 @@
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
-        package="com.github.piasy.biv.example"
         >
 
     <application
@@ -42,24 +41,24 @@
                 tools:replace="android:value"
                 />
 
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".FrescoLoaderActivity">
+        <activity android:name=".FrescoLoaderActivity" android:exported="true">
         </activity>
-        <activity android:name=".GlideLoaderActivity">
+        <activity android:name=".GlideLoaderActivity" android:exported="true">
         </activity>
-        <activity android:name=".LongImageActivity">
+        <activity android:name=".LongImageActivity" android:exported="true">
         </activity>
-        <activity android:name=".ScaleTypeActivity">
+        <activity android:name=".ScaleTypeActivity" android:exported="true">
         </activity>
-        <activity android:name=".ImageLoaderCallbackActivity">
+        <activity android:name=".ImageLoaderCallbackActivity" android:exported="true">
         </activity>
-        <activity android:name=".CustomSSIVActivity">
+        <activity android:name=".CustomSSIVActivity" android:exported="true">
         </activity>
     </application>
 

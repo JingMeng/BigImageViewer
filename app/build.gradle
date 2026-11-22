@@ -23,14 +23,18 @@
  */
 
 apply plugin: 'com.android.application'
-apply plugin: 'com.github.ben-manes.versions'
 
 android {
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    namespace 'com.github.piasy.biv.example'
     compileSdkVersion rootProject.ext.androidCompileSdkVersion
     buildToolsVersion rootProject.ext.androidBuildToolsVersion
 
     defaultConfig {
-        minSdkVersion 15
+        minSdk 15
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode rootProject.ext.releaseVersionCode
         versionName rootProject.ext.releaseVersionName
@@ -59,6 +63,7 @@ android {
             debuggable true
             signingConfig signingConfigs.develop
         }
+    
 
         release {
             minifyEnabled true
@@ -103,3 +108,7 @@ dependencies {
 
     implementation project(':ProgressPieIndicator')
 }
+
+
+
+

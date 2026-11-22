@@ -26,30 +26,23 @@
 
 buildscript {
     repositories {
-        jcenter()
+        mavenCentral()
         google()
         maven {
             url "https://plugins.gradle.org/m2/"
         }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.0.1'
-
-        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.0'
-        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.0'
+        classpath 'com.android.tools.build:gradle:8.2.1'
 
         // ./gradlew dependencyUpdates
-        classpath 'com.github.ben-manes:gradle-versions-plugin:0.17.0'
     }
 }
 
 allprojects {
     repositories {
-        jcenter()
+        mavenCentral()
         google()
-        maven {
-            url  "http://dl.bintray.com/piasy/maven"
-        }
     }
 }
 
@@ -78,13 +71,33 @@ ext {
     releaseVersionCode = 25
     releaseVersionName = '1.4.6'
 
-    androidCompileSdkVersion = 27
-    androidBuildToolsVersion = '27.0.2'
+    androidCompileSdkVersion = 34
+    androidBuildToolsVersion = '34.0.0'
     androidSupportSdkVersion = '27.0.2'
     minSdkVersion = 14
-    targetSdkVersion = 27
+    targetSdkVersion = 34
 
     frescoVersion = '1.7.1'
     glideVersion = '4.5.0'
     ssivVersion = '3.9.0'
+}
+
+subprojects {
+    plugins.withId('com.android.library') {
+        android {
+            namespace = [BigImageViewer: 'com.github.piasy.biv',
+                FrescoImageLoader: 'com.github.piasy.biv.loader.fresco',
+                GlideImageLoader: 'com.github.piasy.biv.loader.glide',
+                ProgressPieIndicator: 'com.github.piasy.biv.indicator.progresspie'][project.name]
+            compileOptions {
+                sourceCompatibility JavaVersion.VERSION_11
+                targetCompatibility JavaVersion.VERSION_11
+            }
+        }
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
 }

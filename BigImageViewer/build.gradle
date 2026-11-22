@@ -23,8 +23,6 @@
  */
 
 apply plugin: 'com.android.library'
-apply plugin: 'com.github.ben-manes.versions'
-apply from: "https://raw.githubusercontent.com/Piasy/GradleScripts/master/PRJ_NAME/gradle/bintray.gradle"
 
 android {
     compileSdkVersion rootProject.ext.androidCompileSdkVersion
@@ -45,7 +43,7 @@ android {
 }
 
 dependencies {
-    implementation "com.android.support:support-annotations:$rootProject.ext.androidSupportSdkVersion"
+    implementation 'androidx.annotation:annotation:1.1.0'
 
     api "com.davemorrissey.labs:subsampling-scale-image-view:$rootProject.ext.ssivVersion"
 }
